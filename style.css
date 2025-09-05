@@ -482,6 +482,7 @@ section {
     padding: 100px 0;
     position: relative;
     scroll-margin-top: 90px; /* Prevent anchor content from hiding under fixed navbar */
+    transition: opacity 0.5s ease-in-out;
 }
 
 .section-header {
@@ -505,15 +506,19 @@ section {
     margin-bottom: 1rem;
 }
 
-/* Skills Section */
+/* Skills Section with improved transitions */
 .skills {
     background: #0f0f0f;
+    position: relative;
+    z-index: 2;
 }
 
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
+    position: relative;
+    z-index: 3;
 }
 
 .skill-card {
@@ -521,7 +526,7 @@ section {
     padding: 2.5rem;
     border-radius: 15px;
     border: 1px solid #333;
-    transition: all 0.3s ease;
+    transition: transform 0.4s ease, opacity 0.4s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     position: relative;
     overflow: hidden;
 }
